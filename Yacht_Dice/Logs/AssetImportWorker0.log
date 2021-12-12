@@ -1,0 +1,1026 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.0f1 (3721df5a8b28) revision 3613151'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'ko' Physical Memory: 130992 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\2020.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/SourceTree/Yacht_Dice
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+4532
+Successfully changed project path to: D:/SourceTree/Yacht_Dice
+D:/SourceTree/Yacht_Dice
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 16.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0f1 (3721df5a8b28)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/SourceTree/Yacht_Dice/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
+    Vendor:   
+    VRAM:     10078 MB
+    Driver:   27.21.14.5709
+Initialize mono
+Mono path[0] = 'C:/Program Files/2020.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56824
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002445 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 16.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.866 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000637 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.667 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 56.4 MB.
+System memory in use after: 56.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1535.
+Total: 1.373900 ms (FindLiveObjects: 0.123500 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.156500 ms  DeleteObjects: 0.050400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41cfa13f056e58f64cf5f3363de7353') in 0.007020 seconds
+  Import took 0.008458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.187524 seconds.
+  path: Assets/Texture
+  artifactKey: Guid(3742f640dbacdc84d96959f287bb6af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture using Guid(3742f640dbacdc84d96959f287bb6af4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85cd4f7414e0594c6c47d639552dc233') in 0.005509 seconds
+  Import took 0.006974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.504158 seconds.
+  path: Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure blue.prefab
+  artifactKey: Guid(c7675d177a715e348afc15f0fd5012b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure blue.prefab using Guid(c7675d177a715e348afc15f0fd5012b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61595ca228438dcf19947105740577ef') in 0.314122 seconds
+  Import took 0.316445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure write.prefab
+  artifactKey: Guid(0d2b9188252a78b4298fb8e34d9229ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure write.prefab using Guid(0d2b9188252a78b4298fb8e34d9229ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e98eb7c3b76d112da624887a5463bfff') in 0.029301 seconds
+  Import took 0.031547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Dice_6/Prefabs/Dice_d6_Plastic Rough Scratched red.prefab
+  artifactKey: Guid(97c3c101a2a52aa47817bd3b97936311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Prefabs/Dice_d6_Plastic Rough Scratched red.prefab using Guid(97c3c101a2a52aa47817bd3b97936311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b712abaa044b99c1af6eb1e30ceaa48f') in 0.022772 seconds
+  Import took 0.024996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure red.prefab
+  artifactKey: Guid(3a83d1b770fe0e34ea0ec9f13369f5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Prefabs/Dice_d6_Plastic Glossy Pure red.prefab using Guid(3a83d1b770fe0e34ea0ec9f13369f5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2a0dd91e4821f4ef20ae0c60392ecd') in 0.021102 seconds
+  Import took 0.023285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Dice_6/Prefabs/Dice_d6_Plastic Rough Scratched blue.prefab
+  artifactKey: Guid(0520e268e72d34844b52ad3a8b2473ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Prefabs/Dice_d6_Plastic Rough Scratched blue.prefab using Guid(0520e268e72d34844b52ad3a8b2473ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89016cbd8c65fb70d280e0812e26d76') in 0.023403 seconds
+  Import took 0.025534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 257.280428 seconds.
+  path: Assets/Texture/photos_2015_09_18_fst_787q223ujd.jpg
+  artifactKey: Guid(3f1c18818924a5c40bb468bb96da114d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/photos_2015_09_18_fst_787q223ujd.jpg using Guid(3f1c18818924a5c40bb468bb96da114d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae3614bd0cb32d6aa8e63d2dffd96e0') in 0.061476 seconds
+  Import took 0.063119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.918918 seconds.
+  path: Assets/Texture/photos_2015_09_18_fst_787q223ujd.jpg
+  artifactKey: Guid(3f1c18818924a5c40bb468bb96da114d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/photos_2015_09_18_fst_787q223ujd.jpg using Guid(3f1c18818924a5c40bb468bb96da114d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32de5df1bdcfa98679eb99ea6c96d84a') in 0.010524 seconds
+  Import took 0.012140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 238.248277 seconds.
+  path: Assets/Dice_6/Materials/Plastic Glossy Pure blue.mat
+  artifactKey: Guid(2a10483549764b84ea60530965daaf97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Materials/Plastic Glossy Pure blue.mat using Guid(2a10483549764b84ea60530965daaf97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7dc206ca617ab7f08ba8c7d0a2f8a19') in 0.104312 seconds
+  Import took 0.106842 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Dice_6/Materials/Plastic Rough Scratched red.mat
+  artifactKey: Guid(ca1eda824ec216941b17f26ea3a0693f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Materials/Plastic Rough Scratched red.mat using Guid(ca1eda824ec216941b17f26ea3a0693f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de4589339abd70b2181ce4871aeaf51f') in 0.033310 seconds
+  Import took 0.035438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Dice_6/Materials/Plastic Glossy Pure red.mat
+  artifactKey: Guid(0711445adf5d30c40bd0eb92c9335290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Materials/Plastic Glossy Pure red.mat using Guid(0711445adf5d30c40bd0eb92c9335290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ea8d6172e4bd1d86ae4a46d4d4f51f3') in 0.019143 seconds
+  Import took 0.021259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Dice_6/Materials/Plastic Rough Scratched blue.mat
+  artifactKey: Guid(cbff638bf8da3fd4e802669397794885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Materials/Plastic Rough Scratched blue.mat using Guid(cbff638bf8da3fd4e802669397794885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccc32575e2ef38843c3e3e7f5f747e22') in 0.018498 seconds
+  Import took 0.020675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Dice_6/Materials/Plastic Glossy Pure write.mat
+  artifactKey: Guid(e8b5b628a7df3304ea784f49f8d5f3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Materials/Plastic Glossy Pure write.mat using Guid(e8b5b628a7df3304ea784f49f8d5f3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ded90b063c91e925dddb38093c1c914') in 0.018592 seconds
+  Import took 0.020788 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.610 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.2 MB.
+System memory in use after: 60.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1580.
+Total: 1.203700 ms (FindLiveObjects: 0.138400 ms CreateObjectMapping: 0.035700 ms MarkObjects: 0.995000 ms  DeleteObjects: 0.033700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.395152 seconds.
+  path: Assets/Physics
+  artifactKey: Guid(7d4b94816d5b731488bab4cce3ef0728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Physics using Guid(7d4b94816d5b731488bab4cce3ef0728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed36dbd0f941cb9f32bd38bba6c1b0c3') in 0.006363 seconds
+  Import took 0.007859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.127522 seconds.
+  path: Assets/Physics/New Physic Material.physicMaterial
+  artifactKey: Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Physics/New Physic Material.physicMaterial using Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83fe6ea4b7edea2c9a41f735fd5b11aa') in 0.012561 seconds
+  Import took 0.014124 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000542 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.627 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.4 MB.
+System memory in use after: 60.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1582.
+Total: 1.274500 ms (FindLiveObjects: 0.198400 ms CreateObjectMapping: 0.037200 ms MarkObjects: 1.002700 ms  DeleteObjects: 0.035300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.049709 seconds.
+  path: Assets/Physics/Dice.physicMaterial
+  artifactKey: Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Physics/Dice.physicMaterial using Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c39e8a985da08a48b836d1fd91d01c94') in 0.011820 seconds
+  Import took 0.013405 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000571 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.599 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.5 MB.
+System memory in use after: 60.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1584.
+Total: 1.182200 ms (FindLiveObjects: 0.119700 ms CreateObjectMapping: 0.032100 ms MarkObjects: 0.996700 ms  DeleteObjects: 0.033000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.617 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.6 MB.
+System memory in use after: 60.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1586.
+Total: 1.231100 ms (FindLiveObjects: 0.145700 ms CreateObjectMapping: 0.042700 ms MarkObjects: 1.005500 ms  DeleteObjects: 0.036300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000574 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.600 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1588.
+Total: 1.248900 ms (FindLiveObjects: 0.134400 ms CreateObjectMapping: 0.039900 ms MarkObjects: 1.041000 ms  DeleteObjects: 0.033100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 303.971542 seconds.
+  path: Assets/Texture/New Material.mat
+  artifactKey: Guid(a08c8aee83e06164d8ff4e299bff754a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/New Material.mat using Guid(a08c8aee83e06164d8ff4e299bff754a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bad44ba5fdf13d5a0b7633e981249063') in 0.045533 seconds
+  Import took 0.047105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.312751 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Albedo.png
+  artifactKey: Guid(e2480bb31748f3b4a8156ccbd02e9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Albedo.png using Guid(e2480bb31748f3b4a8156ccbd02e9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7d89943e8da40c0726f928acdf6dba') in 0.018535 seconds
+  Import took 0.020133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Albedo.png
+  artifactKey: Guid(c4700203128b7294f93016df58848be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Albedo.png using Guid(c4700203128b7294f93016df58848be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6beec08f1b1d4cfecad8e6befbc7c8e3') in 0.010578 seconds
+  Import took 0.012082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Height.png
+  artifactKey: Guid(726fc95e54699b94eb6f82f3434524d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Height.png using Guid(726fc95e54699b94eb6f82f3434524d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a9f1fd7089fa16c3ba1ca6ef365f09') in 0.012191 seconds
+  Import took 0.013802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_AO.png
+  artifactKey: Guid(16973ba73eb7acc498dce98490adec69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_AO.png using Guid(16973ba73eb7acc498dce98490adec69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8867ce0418f6c1d8a8849255080111') in 0.011248 seconds
+  Import took 0.012700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Metallic.png
+  artifactKey: Guid(e91c267c6ca4ef64fb31a75cabed0ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Metallic.png using Guid(e91c267c6ca4ef64fb31a75cabed0ba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da758405874b0557464473fc53625608') in 0.011680 seconds
+  Import took 0.013201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Albedo.png
+  artifactKey: Guid(fadea2bd9f2067644af63128c6451c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Albedo.png using Guid(fadea2bd9f2067644af63128c6451c26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa36511c66c632149c4ff02bd423f5dc') in 0.026589 seconds
+  Import took 0.028188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Metallic.png
+  artifactKey: Guid(17a13ecadd7c3f24898c70ae1cca6c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Metallic.png using Guid(17a13ecadd7c3f24898c70ae1cca6c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1bded54accf70cbbbbb784e584f19a') in 0.009834 seconds
+  Import took 0.011374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_AO.png
+  artifactKey: Guid(3aab6cb6b40ad804984806bface2138e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_AO.png using Guid(3aab6cb6b40ad804984806bface2138e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5cf86db87f26315aa9d628e95e912ab') in 0.012805 seconds
+  Import took 0.014329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_AO.png
+  artifactKey: Guid(93a0f6a6b4ff5924fb5838eebd42ab86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_AO.png using Guid(93a0f6a6b4ff5924fb5838eebd42ab86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f3b611c7f28ab1fabb0e8ed8d81622') in 0.020066 seconds
+  Import took 0.021555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Albedo.png
+  artifactKey: Guid(abb831eed38ac1849960996afcff4214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Albedo.png using Guid(abb831eed38ac1849960996afcff4214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59fee8e1c459fe2ff4d44a8a43fa3c2') in 0.026589 seconds
+  Import took 0.028142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Metallic.png
+  artifactKey: Guid(2b118882b518aec4faa851fb591980cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Metallic.png using Guid(2b118882b518aec4faa851fb591980cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a514da8487e3df7f31ebff10bc3af16') in 0.011100 seconds
+  Import took 0.012599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_AO.png
+  artifactKey: Guid(bed40957800a0564db0dc786dbf9290f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_AO.png using Guid(bed40957800a0564db0dc786dbf9290f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6b8ff9fdcee02e04718b4530ee4f47') in 0.009864 seconds
+  Import took 0.011414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Height.png
+  artifactKey: Guid(68aad4f4d20bd1743a2e53237e0b511c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Height.png using Guid(68aad4f4d20bd1743a2e53237e0b511c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48aa1fb8ca7754ea0c0ad69d906737f6') in 0.018875 seconds
+  Import took 0.020339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Height.png
+  artifactKey: Guid(50934b958f128974da0db16091fb3344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Height.png using Guid(50934b958f128974da0db16091fb3344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b897fa5784bbe3967273272ab875c88') in 0.006099 seconds
+  Import took 0.007557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Metallic.png
+  artifactKey: Guid(cf269553411a6c1488fd9a1f6fd2f4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Metallic.png using Guid(cf269553411a6c1488fd9a1f6fd2f4a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666a558b38f46a234b3ddcae5ee75894') in 0.012997 seconds
+  Import took 0.014451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Metallic.png
+  artifactKey: Guid(02330fb06c524464daf63e7d0f7bf727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Metallic.png using Guid(02330fb06c524464daf63e7d0f7bf727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60fc129252e9413fc57e26fb93927aec') in 0.016839 seconds
+  Import took 0.018312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Metallic.png
+  artifactKey: Guid(fb8218d0d35c49843a9e094fd1c3a6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Metallic.png using Guid(fb8218d0d35c49843a9e094fd1c3a6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f5137196c5ff1734320d941b2473368') in 0.006475 seconds
+  Import took 0.007886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Height.png
+  artifactKey: Guid(05b565f050f3fd747b13b0eb38c673fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Height.png using Guid(05b565f050f3fd747b13b0eb38c673fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b691e694c268e5409c248c28b2c6ba03') in 0.007930 seconds
+  Import took 0.009409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Albedo.png
+  artifactKey: Guid(919da8488da31fb418a4fb6ccbbe604a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Albedo.png using Guid(919da8488da31fb418a4fb6ccbbe604a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ae3865bbd0f0d1783f993bf184747e') in 0.007582 seconds
+  Import took 0.009123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_AO.png
+  artifactKey: Guid(ce49215fb4bde8345bfb2fd53cc39a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_AO.png using Guid(ce49215fb4bde8345bfb2fd53cc39a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d13275423371a5e2f1015fc6fd427d') in 0.004677 seconds
+  Import took 0.006116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_AO.png
+  artifactKey: Guid(c4b7e3a314eb4cc42b832cddf06abf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_AO.png using Guid(c4b7e3a314eb4cc42b832cddf06abf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d326c6587b50c2163a3fb5ac1202d6') in 0.004822 seconds
+  Import took 0.006310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Height.png
+  artifactKey: Guid(b5c14bb054695684b97be9a6c08eca28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Height.png using Guid(b5c14bb054695684b97be9a6c08eca28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fee0a70b9d31988a28cf505ce0472c') in 0.005652 seconds
+  Import took 0.007127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Height.png
+  artifactKey: Guid(db806d63ec5a0f2429d24b0c9d6e6be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Height.png using Guid(db806d63ec5a0f2429d24b0c9d6e6be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a29c10b37d14a8116194355bd0e2169e') in 0.005633 seconds
+  Import took 0.007186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Albedo.png
+  artifactKey: Guid(e2480bb31748f3b4a8156ccbd02e9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Albedo.png using Guid(e2480bb31748f3b4a8156ccbd02e9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7d89943e8da40c0726f928acdf6dba') in 0.005605 seconds
+  Import took 0.007149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_AO.png
+  artifactKey: Guid(98ce63e73441b024ebc599c42c985a28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_AO.png using Guid(98ce63e73441b024ebc599c42c985a28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a4195ed4245bbe13afb8b5814b2fc4') in 0.004836 seconds
+  Import took 0.006315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_AO.png
+  artifactKey: Guid(89afec89423cc264f8d378e45fb52d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_AO.png using Guid(89afec89423cc264f8d378e45fb52d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2b8bb3e56da50dd41778e1bd32d147') in 0.005777 seconds
+  Import took 0.007277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Albedo.png
+  artifactKey: Guid(3a09e65ce50e13b488fe7e7ce710f91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Albedo.png using Guid(3a09e65ce50e13b488fe7e7ce710f91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c126d9cd56abc9efee560f954587a7d6') in 0.006531 seconds
+  Import took 0.008091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Albedo.png
+  artifactKey: Guid(8ee264cfe55d2a7438a264c8ae8ac325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Albedo.png using Guid(8ee264cfe55d2a7438a264c8ae8ac325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f2aa6bb94c044f5fa00cbd339a9c8a') in 0.006667 seconds
+  Import took 0.008127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Albedo.png
+  artifactKey: Guid(1f64c127354e169468d6a7d477120df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Albedo.png using Guid(1f64c127354e169468d6a7d477120df2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd3fbdd4b2cd04222099ed81ac5614d') in 0.008000 seconds
+  Import took 0.009505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Albedo.png
+  artifactKey: Guid(3a09e65ce50e13b488fe7e7ce710f91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Albedo.png using Guid(3a09e65ce50e13b488fe7e7ce710f91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c126d9cd56abc9efee560f954587a7d6') in 0.004567 seconds
+  Import took 0.006060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Metallic.png
+  artifactKey: Guid(a3cd66d0e2aca2f46adad530c613dba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Metallic.png using Guid(a3cd66d0e2aca2f46adad530c613dba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb848e62d668ea06c62d17266d03cc0a') in 0.004571 seconds
+  Import took 0.006031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Metallic.png
+  artifactKey: Guid(30765fa1978fe244fb3f467caad5e93e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Metallic.png using Guid(30765fa1978fe244fb3f467caad5e93e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6f558ebc01c57fb4b9bbb0e5c343aaa') in 0.006454 seconds
+  Import took 0.007908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_AO.png
+  artifactKey: Guid(fe0d5dfaffd711b47b45de2d241229eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_AO.png using Guid(fe0d5dfaffd711b47b45de2d241229eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f01197141386629e0cac60c5dda8939') in 0.005845 seconds
+  Import took 0.007325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Height.png
+  artifactKey: Guid(5b9de5619f1c0ff4a8f4a920bec0bd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Height.png using Guid(5b9de5619f1c0ff4a8f4a920bec0bd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838183550fa2b685c68c8b2583af35fb') in 0.005536 seconds
+  Import took 0.006990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Albedo.png
+  artifactKey: Guid(b927f5d70ed2ae84a8336933f7b35ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Albedo.png using Guid(b927f5d70ed2ae84a8336933f7b35ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26db58ded02b3e86c661465cacaae507') in 0.006627 seconds
+  Import took 0.008080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Height.png
+  artifactKey: Guid(2fab454dc55e30a4f9a8aac740058ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Height.png using Guid(2fab454dc55e30a4f9a8aac740058ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c483c79afa46f3e06118d69f4836d91a') in 0.005816 seconds
+  Import took 0.007289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Height.png
+  artifactKey: Guid(82dfc030a1e8cf14d99173b02e1fe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Height.png using Guid(82dfc030a1e8cf14d99173b02e1fe7c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db8b899ed7ef13248b56835ead02c2ac') in 0.004416 seconds
+  Import took 0.005845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Metallic.png
+  artifactKey: Guid(0fdd16cdaff3e2d44bc972f1238f101a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Metallic.png using Guid(0fdd16cdaff3e2d44bc972f1238f101a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b103d46c49880fd86e9f7a90186527') in 0.004783 seconds
+  Import took 0.006230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_AO.png
+  artifactKey: Guid(7be32fded285f4a4d89964ce7288b2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_AO.png using Guid(7be32fded285f4a4d89964ce7288b2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06ffc32ef2b0442028f0174d39a4c21') in 0.005859 seconds
+  Import took 0.007345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Height.png
+  artifactKey: Guid(a9a18e51e0222fb4e94e3e74aa5374ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Height.png using Guid(a9a18e51e0222fb4e94e3e74aa5374ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5478624c1150863c13ba4d3e35e865') in 0.004535 seconds
+  Import took 0.006019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Metallic.png
+  artifactKey: Guid(a83ddf3f35cbf824d886d1ce420c2845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Metallic.png using Guid(a83ddf3f35cbf824d886d1ce420c2845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d4eed871c56776119112731a013ed42') in 0.006442 seconds
+  Import took 0.007917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Albedo.png
+  artifactKey: Guid(24dd8142fdda1224094af3a991fc103e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Albedo.png using Guid(24dd8142fdda1224094af3a991fc103e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654287da2bce4d92ad7e584b87a18131') in 0.007962 seconds
+  Import took 0.009511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.271053 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Normal.png
+  artifactKey: Guid(9328d0bc35ab9d64bb6c2b225c266347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Normal.png using Guid(9328d0bc35ab9d64bb6c2b225c266347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf5bdcd84dd0e4e6747036bdbe86aa22') in 0.008017 seconds
+  Import took 0.009629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Normal.png
+  artifactKey: Guid(0a54f3c455c17ed40a7d079bd269cec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Normal.png using Guid(0a54f3c455c17ed40a7d079bd269cec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf630b5eb1b125d93c49b0a53ebd3079') in 0.010934 seconds
+  Import took 0.012541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Normal.png
+  artifactKey: Guid(2ca14b50f1f755a4389c2ebf4144819f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Normal.png using Guid(2ca14b50f1f755a4389c2ebf4144819f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3fe22bc5d9c5e253ee6ca0c8e59ec7') in 0.006942 seconds
+  Import took 0.008481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Normal.png
+  artifactKey: Guid(5711f172a6cdb854d9d35353b1024400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Normal.png using Guid(5711f172a6cdb854d9d35353b1024400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6101344dd7663db6f09fdd3186d7dd3c') in 0.006807 seconds
+  Import took 0.008319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Normal.png
+  artifactKey: Guid(7ae29913566db274285a08e9df5661bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Normal.png using Guid(7ae29913566db274285a08e9df5661bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb178d9e8d22754bff98942c9b561bc4') in 0.007085 seconds
+  Import took 0.008603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Normal.png
+  artifactKey: Guid(bbd1d9ce7df34e84fa146a2789b3fe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Normal.png using Guid(bbd1d9ce7df34e84fa146a2789b3fe9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6de58d83e0d05ea997b277621e0dd62') in 0.008674 seconds
+  Import took 0.010186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Normal.png
+  artifactKey: Guid(29e19b7297a3d294995c8880a0e8113f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Normal.png using Guid(29e19b7297a3d294995c8880a0e8113f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f16bd21b6dd1c77cf1b8edfe0941b6') in 0.009073 seconds
+  Import took 0.010610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Normal.png
+  artifactKey: Guid(c40c6aae9907fd246893b707aa3978b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Normal.png using Guid(c40c6aae9907fd246893b707aa3978b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1892a0e2e288f7deeb7d347def8f78ec') in 0.006925 seconds
+  Import took 0.008385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008806 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Normal.png
+  artifactKey: Guid(29e19b7297a3d294995c8880a0e8113f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Normal.png using Guid(29e19b7297a3d294995c8880a0e8113f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f16bd21b6dd1c77cf1b8edfe0941b6') in 0.008452 seconds
+  Import took 0.010069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.160229 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Normal.png
+  artifactKey: Guid(977ffd0b5c26bd04398f17e71c45be3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Normal.png using Guid(977ffd0b5c26bd04398f17e71c45be3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d3ae320f340764e83eafd1e4afaeb12') in 0.008609 seconds
+  Import took 0.010168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Roughness.png
+  artifactKey: Guid(f7344cc86b10aa14db48cbaeec5b5693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure red/Dice_d6_Roughness.png using Guid(f7344cc86b10aa14db48cbaeec5b5693) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c58bcbec06c9a218779ceabe056ad30') in 0.008411 seconds
+  Import took 0.009996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Roughness.png
+  artifactKey: Guid(efdec088b171a774e91dc827960ea8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched red/Dice_d6_Roughness.png using Guid(efdec088b171a774e91dc827960ea8c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58f1e8615c30866ea52afeef5438fe5e') in 0.008278 seconds
+  Import took 0.009808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Roughness.png
+  artifactKey: Guid(e14bb25fd4e06ab419689e5f58b7b2ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Roughness.png using Guid(e14bb25fd4e06ab419689e5f58b7b2ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec48ab0eed61aef725cc2a0002299421') in 0.008178 seconds
+  Import took 0.009779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Roughness.png
+  artifactKey: Guid(b8e1d0bc2e275a243ba7235af1c572c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure blue/Dice_d6_Roughness.png using Guid(b8e1d0bc2e275a243ba7235af1c572c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd019e17fbb36c451ba73239865b8e52d') in 0.005250 seconds
+  Import took 0.006873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Roughness.png
+  artifactKey: Guid(84b090d050288ea4c914df2bb2a08440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Glossy Pure write/Dice_d6_Roughness.png using Guid(84b090d050288ea4c914df2bb2a08440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef40a28f12c9fc6a25b95abf71203ba5') in 0.005942 seconds
+  Import took 0.007527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Normal.png
+  artifactKey: Guid(30979f4a80ac5e0448471703388fe7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/2k/Plastic Rough Scratched blue/Dice_d6_Normal.png using Guid(30979f4a80ac5e0448471703388fe7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a4b508d280ea5b44af8f72ac874abb') in 0.008891 seconds
+  Import took 0.010394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Roughness.png
+  artifactKey: Guid(2a138f60939fa204eb93fdb353cfc92c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched blue/Dice_d6_Roughness.png using Guid(2a138f60939fa204eb93fdb353cfc92c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c7b8ef064d257b58566df60cb72aa3') in 0.007134 seconds
+  Import took 0.008635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Roughness.png
+  artifactKey: Guid(71ce7d535ca02be48996a5180f8eee0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure blue/Dice_d6_Roughness.png using Guid(71ce7d535ca02be48996a5180f8eee0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa3e59fbb3e7c90964db20495d6ed816') in 0.007601 seconds
+  Import took 0.009120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Roughness.png
+  artifactKey: Guid(fed344d4f6c76fb4fb050c1029a0e37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Roughness.png using Guid(fed344d4f6c76fb4fb050c1029a0e37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ddb995d97d8abf7a8a6d52f1726be3') in 0.006943 seconds
+  Import took 0.008412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Roughness.png
+  artifactKey: Guid(32ed9170035850945a9338278c916455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Roughness.png using Guid(32ed9170035850945a9338278c916455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91f4840e1d0f671ddd10f07b9397147') in 0.004708 seconds
+  Import took 0.006175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Roughness.png
+  artifactKey: Guid(fed344d4f6c76fb4fb050c1029a0e37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Rough Scratched red/Dice_d6_Roughness.png using Guid(fed344d4f6c76fb4fb050c1029a0e37a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7ddb995d97d8abf7a8a6d52f1726be3') in 0.006975 seconds
+  Import took 0.008435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Roughness.png
+  artifactKey: Guid(75264972ce70b8e4dae805d3a6b96859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure red/Dice_d6_Roughness.png using Guid(75264972ce70b8e4dae805d3a6b96859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93f5245282f07ef630adfe42e8564a2') in 0.004858 seconds
+  Import took 0.006303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006683 seconds.
+  path: Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Roughness.png
+  artifactKey: Guid(32ed9170035850945a9338278c916455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dice_6/Textures/512/Plastic Glossy Pure write/Dice_d6_Roughness.png using Guid(32ed9170035850945a9338278c916455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c91f4840e1d0f671ddd10f07b9397147') in 0.004770 seconds
+  Import took 0.006353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 686.058120 seconds.
+  path: Assets/Texture/Wall.mat
+  artifactKey: Guid(a08c8aee83e06164d8ff4e299bff754a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Wall.mat using Guid(a08c8aee83e06164d8ff4e299bff754a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aad4fe021d8bbd2f66e02b73297878ea') in 0.010850 seconds
+  Import took 0.012733 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000509 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.609 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.0 MB.
+System memory in use after: 61.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1593.
+Total: 1.192200 ms (FindLiveObjects: 0.125400 ms CreateObjectMapping: 0.030700 ms MarkObjects: 0.999800 ms  DeleteObjects: 0.035500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.952403 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(12e41dff463db2e4697b988e129d8b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(12e41dff463db2e4697b988e129d8b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd583935c806516b8561660f7cd344d') in 0.006171 seconds
+  Import took 0.007636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.913452 seconds.
+  path: Assets/Prefabs/Dice Variant.prefab
+  artifactKey: Guid(97c3b9be08a45c14999c5d545a2917fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice Variant.prefab using Guid(97c3b9be08a45c14999c5d545a2917fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6866f129cc2ca917865b66276eb4077') in 0.053667 seconds
+  Import took 0.055978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.781616 seconds.
+  path: Assets/Prefabs/Dice.prefab
+  artifactKey: Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice.prefab using Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b48029bc2c9a6198e69071a8923b09') in 0.018349 seconds
+  Import took 0.020691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 129.955816 seconds.
+  path: Assets/Physics/Dice.physicMaterial
+  artifactKey: Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Physics/Dice.physicMaterial using Guid(faee52b0aa5f7de41975755a16121ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fb57eeb2d4ffc1b317f72fb0255859b') in 0.002758 seconds
+  Import took 0.004300 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000663 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.629 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.1 MB.
+System memory in use after: 61.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1596.
+Total: 1.410400 ms (FindLiveObjects: 0.160200 ms CreateObjectMapping: 0.052400 ms MarkObjects: 1.158000 ms  DeleteObjects: 0.038300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.112285 seconds.
+  path: Assets/Prefabs/Dice.prefab
+  artifactKey: Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice.prefab using Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7b7c9807cd91639485632fb2f07cf4') in 0.053930 seconds
+  Import took 0.056391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005232 seconds.
+  path: Assets/Prefabs/Dice.prefab
+  artifactKey: Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice.prefab using Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7b7c9807cd91639485632fb2f07cf4') in 0.019429 seconds
+  Import took 0.022022 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000604 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.599 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.3 MB.
+System memory in use after: 61.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1599.
+Total: 1.264300 ms (FindLiveObjects: 0.139000 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.049400 ms  DeleteObjects: 0.038500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000566 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.601 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1089 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.4 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1601.
+Total: 1.555000 ms (FindLiveObjects: 0.325000 ms CreateObjectMapping: 0.059600 ms MarkObjects: 1.127900 ms  DeleteObjects: 0.041700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 251.701583 seconds.
+  path: Assets/Prefabs/Dice.prefab
+  artifactKey: Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice.prefab using Guid(337ec853210f8614497742578c7ae98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf20d26c7a3d21eae148befaa26dc7ec') in 0.051857 seconds
+  Import took 0.054125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.651986 seconds.
+  path: Assets/Prefabs/Dice 1.prefab
+  artifactKey: Guid(161ca05fa0e3b6849bdf71c571cfa586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice 1.prefab using Guid(161ca05fa0e3b6849bdf71c571cfa586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7e717fff910936fc0f76973c9a9e77b') in 0.021460 seconds
+  Import took 0.023773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.381421 seconds.
+  path: Assets/Prefabs/Dice.prefab
+  artifactKey: Guid(161ca05fa0e3b6849bdf71c571cfa586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dice.prefab using Guid(161ca05fa0e3b6849bdf71c571cfa586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5258c5490f96a94e4b392731bd19e3ab') in 0.017214 seconds
+  Import took 0.019554 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
