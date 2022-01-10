@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+    public static GameManager GetInstance()
+    {
+        return instance;
+    }
+
     public Transform Reroll_Cup;
     public Transform Reroll_Cup_Ready_Position;
     public Transform Reroll_Cup_Wait_Position;
@@ -12,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public bool Reroll_Ready;
     public bool isRerolling;
+    public bool isSelecting;
 
     public float cup_move_speed = 15;
 
@@ -19,10 +26,16 @@ public class GameManager : MonoBehaviour
     public List<GameObject> Reroll_Dices;
     System.Random random = new System.Random();
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         Reroll_Ready = false;
         isRerolling = false;
+        isSelecting = false;
     }
 
     void Update()
@@ -56,6 +69,7 @@ public class GameManager : MonoBehaviour
         {
             go.transform.position = go.GetComponent<Dice>().Reroll_Position.position;
             go.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            go.GetComponent<Dice>().isRerolled = false;
         }
 
         Reroll_Cup_AN.SetTrigger("Reroll");
@@ -73,17 +87,19 @@ public class GameManager : MonoBehaviour
         {
             int randomPower = random.Next(3, 6);
             int randomRotate = random.Next(20, 30);
-            Debug.Log("added force : " + Reroll_Dices[i].name + " , " + randomPower.ToString());
             Reroll_Dices[i].GetComponent<Rigidbody>().AddForce((Reroll_Dice_Target_Position.position - Reroll_Dices[i].transform.position) * randomPower, ForceMode.Impulse);
             Reroll_Dices[i].GetComponent<Rigidbody>().AddTorque(Vector3.left * randomRotate, ForceMode.Impulse);
         }
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.45f);
         Reroll_Cup.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         Reroll_Ready = false;
         isRerolling = false;
         Reroll_Cup_AN.enabled = false;
+        isSelecting = true;
+
+        Dice_Select_Manager.instance.rerolled_Dices = Reroll_Dices;
     }
 
 
@@ -91,7 +107,7 @@ public class GameManager : MonoBehaviour
     {
         int offset = 25;
 
-        foreach(GameObject go in Reroll_Dices)
+        foreach (GameObject go in Reroll_Dices)
         {
             go.transform.position = new Vector3(0, 0, offset);
             go.GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -100,6 +116,5 @@ public class GameManager : MonoBehaviour
 
         Reroll_Ready = !Reroll_Ready;
     }
-
 
 }

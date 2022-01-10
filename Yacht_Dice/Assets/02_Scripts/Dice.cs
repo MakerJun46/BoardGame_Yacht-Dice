@@ -15,6 +15,10 @@ public class Dice : MonoBehaviour
 
     public Transform Reroll_Position;
 
+    float noMovementThreshold = 0.0001f;
+    const int moMovementFrames = 3;
+    Vector3[] previousLocations = new Vector3[moMovementFrames];
+
     private void Start()
     {
         RB = gameObject.GetComponent<Rigidbody>();
@@ -32,9 +36,11 @@ public class Dice : MonoBehaviour
 
     public void isStop()
     {
-        if(RB.velocity == Vector3.zero && !isRerolled)
+        if(!isMoving() && !isRerolled)
         {
-            isDiceStop = true;
+            Debug.Log("stop");
+
+            StartCoroutine(waitSecond());
 
             double maxY = 0;
             int number = 0;
@@ -51,5 +57,43 @@ public class Dice : MonoBehaviour
             thisTurn_Number = number;
             isRerolled = true;
         }
+    }
+
+    public bool isMoving()
+    {
+        for(int i = 0; i < previousLocations.Length - 1; i++)
+        {
+            previousLocations[i] = previousLocations[i + 1];
+        }
+        previousLocations[previousLocations.Length - 1] = gameObject.transform.position;
+
+        for(int i = 0; i < previousLocations.Length - 1; i++)
+        {
+            if(Vector3.Distance(previousLocations[i], previousLocations[i + 1]) >= noMovementThreshold)
+            {
+                isDiceStop = false;
+                return true;
+            }
+            else
+            {
+                isDiceStop = true;
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    IEnumerator waitSecond()
+    {
+        yield return new WaitForSeconds(1.0f);
+        isDiceStop = true;
+    }
+
+
+    public void reroll_reset()
+    {
+        isDiceStop = false;
+        isRerolled = false;
     }
 }
