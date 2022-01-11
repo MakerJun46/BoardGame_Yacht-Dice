@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.UI;
 
 public class Dice_Select_Manager : MonoBehaviour
 {
@@ -14,7 +16,10 @@ public class Dice_Select_Manager : MonoBehaviour
     public List<GameObject> rerolled_Dices;
 
     public bool isDiceMoving;
+    public bool isDiceAllStop;
     public int sortCount;
+    public int KeepDiceCount;
+
 
     private void Awake()
     {
@@ -24,6 +29,8 @@ public class Dice_Select_Manager : MonoBehaviour
     private void Start()
     {
         sortCount = -1;
+        KeepDiceCount = 0;
+        isDiceAllStop = false;
         isDiceMoving = false;
     }
 
@@ -31,14 +38,24 @@ public class Dice_Select_Manager : MonoBehaviour
     {
         if (GameManager.GetInstance().isSelecting)
         {
-            mouseClick();
-            if(rerolled_Dices.Count > 0)
-                sort_Dice();
+            if (rerolled_Dices.Count > 0)
+            {
+                sort_Dice();    // 소팅이 다 끝난 다음에
+            }
+            else
+            {
+                SelectDice(); // 선택 가능
+            }
         }
+        else
+        {
+            sortCount = -1;
+        }
+        
     }
 
 
-    public void mouseClick()
+    public void SelectDice()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -66,18 +83,16 @@ public class Dice_Select_Manager : MonoBehaviour
 
     public void sort_Dice()
     {
-        Debug.Log("검사1");
-
         foreach (GameObject go in rerolled_Dices)
         {
             if (!go.GetComponent<Dice>().isDiceStop)
                 return;
         }
 
+        isDiceAllStop = true;
+
         if (!isDiceMoving)
         {
-            Debug.Log("검사2");
-
             moving_min_Dice = rerolled_Dices[0].GetComponent<Dice>();
 
             foreach (GameObject go in rerolled_Dices)
@@ -94,50 +109,79 @@ public class Dice_Select_Manager : MonoBehaviour
         else
         {
             GameObject target = Dice_Select_Positions.transform.GetChild(sortCount).gameObject;
-            moving_min_Dice.transform.position = Vector3.Lerp(Dice_Select_Positions.transform.GetChild(sortCount).position,
-                                                                moving_min_Dice.transform.position, Time.deltaTime * 10);
+            moving_min_Dice.transform.position = Vector3.Lerp(target.transform.position, moving_min_Dice.transform.position, Time.deltaTime * 15);
 
-
-            Quaternion currentRotation = moving_min_Dice.transform.rotation;
-            Quaternion targetRotation;
-
+            Vector3 targetRotation;
             if (moving_min_Dice.thisTurn_Number == 6 || moving_min_Dice.thisTurn_Number == 1)
             {
-                targetRotation = Quaternion.Euler(moving_min_Dice.transform.rotation.x, 0, 0);
+                targetRotation = new Vector3(moving_min_Dice.transform.eulerAngles.x, 0, 0);
             }
             else
             {
-                targetRotation = Quaternion.Euler(moving_min_Dice.transform.rotation.x, 0, moving_min_Dice.transform.rotation.z);
+                targetRotation = new Vector3(moving_min_Dice.transform.eulerAngles.x, 0, moving_min_Dice.transform.eulerAngles.z);
             }
 
-            Debug.Log("rotate to : " + targetRotation);
-            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, Time.deltaTime * 10);
-
-            Debug.Log("moving dice : " + moving_min_Dice.gameObject.name);
+            moving_min_Dice.transform.eulerAngles = Vector3.Lerp(targetRotation, moving_min_Dice.transform.eulerAngles, Time.deltaTime * 15);
 
             if (moving_min_Dice.transform.position == Dice_Select_Positions.transform.GetChild(sortCount).position
-                && moving_min_Dice.transform.rotation == targetRotation)
+                && moving_min_Dice.transform.eulerAngles == targetRotation)
             {
                 rerolled_Dices.Remove(moving_min_Dice.gameObject);
                 isDiceMoving = false;
             }
         }
+    }
 
+    public int Dice_Number_cmp(GameObject a, GameObject b)
+    {
+        if (a.GetComponent<Dice>().thisTurn_Number > b.GetComponent<Dice>().thisTurn_Number)
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 
+    public void KeepingDice_Sort()
+    {
+        GameManager.GetInstance().Keep_Dices.Sort(Dice_Number_cmp);
+
+        for(int i = 0; i < KeepDiceCount; i++)
+        {
+            GameManager.GetInstance().Keep_Dices[i].transform.position = Dice_Keep_Positions.transform.GetChild(i).position;
+        }
     }
 
     public void KeepDice(GameObject dice)
     {
-        dice.GetComponent<Rigidbody>().isKinematic = true;
-        dice.GetComponent<RectTransform>().localPosition = new Vector3(dice.transform.position.x, dice.transform.position.y, 0);
+        Transform position = Dice_Keep_Positions.transform.GetChild(KeepDiceCount);
+        dice.transform.position = position.position;
+
+        GameManager.GetInstance().Keep_Dices.Add(dice);
         dice.GetComponent<Dice>().isKeep = true;
 
+        GameManager.GetInstance().Reroll_Dices.Remove(dice);
+        GameManager.GetInstance().getReroll_Dices();
+            
+        KeepDiceCount++;
+        Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count).gameObject.SetActive(false);
+        sortCount = -1;
+
+        KeepingDice_Sort();
     }
 
     public void backDice(GameObject dice)
     {
-        dice.transform.position = Dices.transform.position;
-        dice.GetComponent<Rigidbody>().isKinematic = false;
+        GameManager.GetInstance().Keep_Dices.Remove(dice);
         dice.GetComponent<Dice>().isKeep = false;
+
+        GameManager.GetInstance().Reroll_Dices.Add(dice);
+        GameManager.GetInstance().getReroll_Dices();
+
+        KeepDiceCount--;
+        Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count - 1).gameObject.SetActive(true);
+        sortCount = -1;
     }
 }
