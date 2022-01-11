@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,10 +23,12 @@ public class GameManager : MonoBehaviour
 
     public float cup_move_speed = 15;
 
-    public List<GameObject> Kepp_Dices;
+    public List<GameObject> Dices;
+    public List<GameObject> Keep_Dices;
     public List<GameObject> Reroll_Dices;
     System.Random random = new System.Random();
 
+    public int Turn_player;
     private void Awake()
     {
         instance = this;
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Turn_player = 1;
         Reroll_Ready = false;
         isRerolling = false;
         isSelecting = false;
@@ -99,7 +103,10 @@ public class GameManager : MonoBehaviour
         Reroll_Cup_AN.enabled = false;
         isSelecting = true;
 
-        Dice_Select_Manager.instance.rerolled_Dices = Reroll_Dices;
+        foreach (GameObject go in Reroll_Dices)
+        {
+            Dice_Select_Manager.instance.rerolled_Dices.Add(go);
+        }
     }
 
 
@@ -109,12 +116,23 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject go in Reroll_Dices)
         {
+            go.GetComponent<Rigidbody>().isKinematic = false;
             go.transform.position = new Vector3(0, 0, offset);
             go.GetComponent<Rigidbody>().velocity = Vector3.zero;
             offset += 5;
         }
 
-        Reroll_Ready = !Reroll_Ready;
+        Dice_Select_Manager.instance.isDiceAllStop = false;
+        isSelecting = false;
+        Reroll_Ready = true;
+    }
+    
+    public void getReroll_Dices()
+    {
+        foreach(GameObject go in Reroll_Dices)
+        {
+            Dice_Select_Manager.instance.rerolled_Dices.Add(go);
+        }
     }
 
 }

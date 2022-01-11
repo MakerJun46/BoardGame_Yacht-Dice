@@ -14,6 +14,7 @@ public class Dice : MonoBehaviour
     public bool isKeep;
 
     public Transform Reroll_Position;
+    public Transform CanStopZone;
 
     float noMovementThreshold = 0.0001f;
     const int moMovementFrames = 3;
@@ -36,11 +37,9 @@ public class Dice : MonoBehaviour
 
     public void isStop()
     {
-        if(!isMoving() && !isRerolled)
+        if(!isMoving() && !isRerolled && gameObject.transform.position.y < 2.0)
         {
             Debug.Log("stop");
-
-            StartCoroutine(waitSecond());
 
             double maxY = 0;
             int number = 0;
@@ -56,6 +55,7 @@ public class Dice : MonoBehaviour
 
             thisTurn_Number = number;
             isRerolled = true;
+            isDiceStop = true;
         }
     }
 
