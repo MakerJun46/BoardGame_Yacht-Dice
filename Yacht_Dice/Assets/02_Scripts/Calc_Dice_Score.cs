@@ -27,9 +27,6 @@ public class Calc_Dice_Score : MonoBehaviour
     public int L_StraightScore;
     public int YachtScore;
 
-    public TextMeshProUGUI SpecialScore_Text;
-    Animation SpecialScore_Text_AN;
-
     public void detect_special_score()
     {
         List<Dice> Dices = new List<Dice>();
@@ -48,7 +45,6 @@ public class Calc_Dice_Score : MonoBehaviour
 
         Calc_All_Score(Dices);
 
-        Text_Update();
 
         ScoreBoard.instance.isSpecialScore_Detected = true;
     }
@@ -182,47 +178,7 @@ public class Calc_Dice_Score : MonoBehaviour
 
         return Array.Exists(NumberCount, x => x == 4);
     }
-
-    public void connect_Text(TextMeshProUGUI text)
-    {
-        SpecialScore_Text = text;
-        SpecialScore_Text_AN = text.GetComponent<Animation>();
-    }
     
-    public void Text_Update()
-    {
-        SpecialScore_Text.text = "";
-        if(isYacht)
-        {
-            SpecialScore_Text.text = SpecialScore_Text.text + "Yacht!";
-            Debug.Log("SetTrigger");
-            SpecialScore_Text_AN.Play();
-        }
-        if(isLargeStraight)
-        {
-            SpecialScore_Text.text = SpecialScore_Text.text + "BigStraight!";
-            Debug.Log("SetTrigger");
-            SpecialScore_Text_AN.Play();
-        }
-        if(isSmallStraight)
-        {
-            SpecialScore_Text.text = SpecialScore_Text.text + "LittleStraight!";
-            Debug.Log("SetTrigger");
-            SpecialScore_Text_AN.Play();
-        }
-        if(isFullHouse)
-        {
-            SpecialScore_Text.text = SpecialScore_Text.text + "FullHouse!";
-            Debug.Log("SetTrigger");
-            SpecialScore_Text_AN.Play();
-        }
-        if(isFourofaKind)
-        {
-            SpecialScore_Text.text = SpecialScore_Text.text + "FourofaKind!";
-            Debug.Log("SetTrigger");
-            SpecialScore_Text_AN.Play();
-        }
-    }
 
     public int Dice_Number_cmp(Dice a, Dice b) => (a.thisTurn_Number > b.thisTurn_Number ? 1 : -1);
 }

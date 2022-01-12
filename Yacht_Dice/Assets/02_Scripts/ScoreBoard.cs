@@ -75,6 +75,7 @@ public class ScoreBoard : MonoBehaviour
     public bool expectedScore_Updated;
     public bool WriteScore;
     public bool isSpecialScore_Detected;
+    public Animation SpecialScore_Text_AN;
 
     private void Awake()
     {
@@ -85,7 +86,7 @@ public class ScoreBoard : MonoBehaviour
     void Start()
     {
         Reset_Values();
-
+        SpecialScore_Text_AN = SpecialScore_Text.GetComponent<Animation>();
     }
 
     void Update()
@@ -93,7 +94,10 @@ public class ScoreBoard : MonoBehaviour
         if (GameManager.GetInstance().isSelecting && Dice_Select_Manager.instance.isDiceAllStop)
         {
             if(!isSpecialScore_Detected)
+            {
                 score_Calculator.detect_special_score();
+                UpdateSpecialScore_Text();
+            }
             Update_expected_Score();
             buttonEnable_Selecting();
         }
@@ -110,7 +114,6 @@ public class ScoreBoard : MonoBehaviour
     public void Reset_Values()
     {
         score_Calculator = new Calc_Dice_Score();
-        score_Calculator.connect_Text(SpecialScore_Text);
 
         player1_upperSection_Buttons = new List<Pair<TextMeshProUGUI, bool>>();
         player2_upperSection_Buttons = new List<Pair<TextMeshProUGUI, bool>>();
@@ -182,22 +185,26 @@ public class ScoreBoard : MonoBehaviour
         {
             foreach (Pair<TextMeshProUGUI, bool> p in player1_upperSection_Buttons)
             {
-                p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                if (!p.Second)
+                    p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
             }
             foreach (Pair<TextMeshProUGUI, bool> p in player1_lowerSection_Buttons)
             {
-                p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                if (!p.Second)
+                    p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
             }
         }
         else
         {
             foreach (Pair<TextMeshProUGUI, bool> p in player2_upperSection_Buttons)
             {
-                p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                if(!p.Second)
+                    p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
             }
             foreach (Pair<TextMeshProUGUI, bool> p in player2_lowerSection_Buttons)
             {
-                p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
+                if (!p.Second)
+                    p.First.gameObject.transform.parent.GetComponent<Button>().enabled = true;
             }
         }
     }
@@ -291,6 +298,46 @@ public class ScoreBoard : MonoBehaviour
         {
             if (!text.Second)
                 text.First.text = "";
+        }
+    }
+
+    public void UpdateSpecialScore_Text()
+    {
+        SpecialScore_Text.text = "";
+        if (score_Calculator.isYacht)
+        {
+            SpecialScore_Text.text = SpecialScore_Text.text + "Yacht!";
+            SpecialScore_Text_AN.Play();
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
+        }
+        if (score_Calculator.isLargeStraight)
+        {
+            SpecialScore_Text.text = SpecialScore_Text.text + "BigStraight!";
+            SpecialScore_Text_AN.Play();
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
+        }
+        if (score_Calculator.isSmallStraight)
+        {
+            SpecialScore_Text.text = SpecialScore_Text.text + "LittleStraight!";
+            SpecialScore_Text_AN.Play();
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
+        }
+        if (score_Calculator.isFullHouse)
+        {
+            SpecialScore_Text.text = SpecialScore_Text.text + "FullHouse!";
+            SpecialScore_Text_AN.Play();
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
+        }
+        if (score_Calculator.isFourofaKind)
+        {
+            SpecialScore_Text.text = SpecialScore_Text.text + "FourofaKind!";
+            SpecialScore_Text_AN.Play();
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
     }
 

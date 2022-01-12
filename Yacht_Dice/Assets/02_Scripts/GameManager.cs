@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     }
 
     public Button RerollButton;
+    public Animation RerollIconAN;
     public GameObject GameOverObjects;
     public TextMeshProUGUI GameOverText;
 
     public Image Induce_Select_Rect_upper;
     public Image Induce_Select_Rect_lower;
+    public Image GameLogo;
 
     public Transform Reroll_Cup;
     public Transform Reroll_Cup_Ready_Position;
@@ -27,8 +29,6 @@ public class GameManager : MonoBehaviour
     public Transform Turn_Cross_Player1_Position;
     public Transform Turn_Cross_Player2_Position;
     public Animator Reroll_Cup_AN;
-
-    public Text CanRerollCount_Text;
 
     public bool Reroll_Ready;
     public bool isRerolling;
@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
 
     public int CanRerollCount;
     public float color_a;
+    public int logo_a;
     public bool color_a_goingUp;
+    public bool logo_a_goingUp;
 
     public int Turn_player;
     public int Turn_Game;
@@ -51,6 +53,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI Reroll_Count_Text;
 
     public bool isGameEnd;
+    public bool isGameStarting;
+
+    public AudioSource Reroll_Guitar_Sound;
+    public AudioSource Reroll_Cup_Shake_Sound;
+    public AudioSource GameStart_Guitar_Sound;
+    public AudioClip Turn_Change_audio_Clip;
+    public AudioClip Special_Score_Sound;
+    public AudioSource Special_Score_Sound_Audio;
+    public AudioSource Winner_Sound;
 
     private void Awake()
     {
@@ -61,13 +72,19 @@ public class GameManager : MonoBehaviour
     {
         Turn_Game = 1;
         Turn_player = 1;
+        isGameStarting = true;
         isGameEnd = false;
         Reset_Values();
+
+        StartCoroutine(GameLogoFadeIn());
     }
 
     void Update()
     {
-        if (isGameEnd)
+        if (isGameStarting)
+        {
+        }
+        else if (isGameEnd)
         {
             GameOverScene();
         }
@@ -84,7 +101,10 @@ public class GameManager : MonoBehaviour
     {
         Turn_Game = 1;
         Turn_player = 1;
+        isGameStarting = true;
         isGameEnd = false;
+
+        RerollButton.gameObject.SetActive(true);
 
         Reset_Values();
         Dice_Select_Manager.instance.Reset_Values();
@@ -96,11 +116,48 @@ public class GameManager : MonoBehaviour
         }
 
         GameOverObjects.SetActive(false);
+
+        StartCoroutine(GameLogoFadeIn());
+    }
+
+    IEnumerator GameLogoFadeIn()
+    {
+        GameLogo.gameObject.SetActive(true);
+        Color color = GameLogo.color;
+
+        GameStart_Guitar_Sound.Play();
+        Reroll_Cup_Shake_Sound.Play();
+
+        while (color.a < 1f)
+        {
+            color.a += Time.deltaTime / 1.5f;
+            GameLogo.color = color;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(GameLogoFadeOut());
+    }
+
+    IEnumerator GameLogoFadeOut()
+    {
+        Color color = GameLogo.color;
+        while (color.a > 0f)
+        {
+            color.a -= Time.deltaTime / 1.0f;
+            GameLogo.color = color;
+            yield return null;
+        }
+        isGameStarting = false;
+        GameLogo.gameObject.SetActive(false);
     }
 
     public void GameOverScene()
     {
         GameOverObjects.SetActive(true);
+        RerollButton.gameObject.SetActive(false);
+
+        Winner_Sound.Play();
 
         ScoreBoard.instance.UpdateScore();
 
@@ -111,12 +168,14 @@ public class GameManager : MonoBehaviour
 
     public void Reset_Values()
     {
+        logo_a = 1;
         color_a = 0;
         CanRerollCount = 3;
         Reroll_Ready = false;
         isRerolling = false;
         isSelecting = false;
         color_a_goingUp = true;
+        logo_a_goingUp = true;
     }
 
     public void Induce_Select()
@@ -141,11 +200,15 @@ public class GameManager : MonoBehaviour
 
     public void CanRerollDetect()
     {
-        CanRerollCount_Text.text = CanRerollCount.ToString();
+        Reroll_Count_Text.text = CanRerollCount.ToString();
 
         if (CanRerollCount == 0 && RerollButton.enabled == true && isSelecting && Dice_Select_Manager.instance.rerolled_Dices.Count == 0)
         {
             Dice_Select_Manager.instance.setKeepPositionAllDices(Dices);
+            RerollButton.enabled = false;
+        }
+        else if(Keep_Dices.Count == 5)
+        {
             RerollButton.enabled = false;
         }
         else if(CanRerollCount > 0 && RerollButton.enabled == false)
@@ -154,12 +217,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Alarm(string contents)
+    {
+        ScoreBoard.instance.SpecialScore_Text_AN.Stop();
+        ScoreBoard.instance.SpecialScore_Text.text = contents;
+        ScoreBoard.instance.SpecialScore_Text_AN.Play();
+    }
+
     public void Turn_Detect()
     {
         if(ScoreBoard.instance.WriteScore)
         {
             Turn_player = Turn_player == 1 ? 2 : 1;
-            if(Turn_player == 1)
+
+            string playerTurn_string = Turn_player == 1 ? "Player A Turn" : "Player B Turn";
+
+            Alarm(playerTurn_string);
+
+            Special_Score_Sound_Audio.clip = Turn_Change_audio_Clip;
+            Special_Score_Sound_Audio.Play();
+
+            if (Turn_player == 1)
             {
                 Turn_Game++;
                 if(Turn_Game == 13)
@@ -168,6 +246,7 @@ public class GameManager : MonoBehaviour
                     return;
                 }
             }
+
             ScoreBoard.instance.WriteScore = false;
             Turn_Change();
         }
@@ -235,16 +314,25 @@ public class GameManager : MonoBehaviour
 
         for(int i = 0; i <Reroll_Dices.Count; i++)
         {
-            int randomRotate = random.Next(10, 20);
+            int randomRotate = random.Next(10, 30);
             Reroll_Dices[i].GetComponent<Rigidbody>().AddTorque(Vector3.up * randomRotate, ForceMode.Impulse);
         }
-
-
-        yield return new WaitForSeconds(0.4f);
 
         for (int i = 0; i < Reroll_Dices.Count; i++)
         {
             int randomPower = random.Next(3, 6);
+            int randomRotate = random.Next(20, 30);
+            Reroll_Dices[i].GetComponent<Rigidbody>().AddForce((Reroll_Dice_Target_Position.position - Reroll_Dices[i].transform.position) * randomPower, ForceMode.Impulse);
+            Reroll_Dices[i].GetComponent<Rigidbody>().AddTorque(Vector3.left * randomRotate, ForceMode.Impulse);
+        }
+
+        Reroll_Cup_Shake_Sound.Play();
+        
+        yield return new WaitForSeconds(0.4f);
+
+        for (int i = 0; i < Reroll_Dices.Count; i++)
+        {
+            int randomPower = random.Next(5, 10);
             int randomRotate = random.Next(20, 30);
             Reroll_Dices[i].GetComponent<Rigidbody>().AddForce((Reroll_Dice_Target_Position.position - Reroll_Dices[i].transform.position) * randomPower, ForceMode.Impulse);
             Reroll_Dices[i].GetComponent<Rigidbody>().AddTorque(Vector3.left * randomRotate, ForceMode.Impulse);
@@ -283,6 +371,9 @@ public class GameManager : MonoBehaviour
         Dice_Select_Manager.instance.isDiceAllStop = false;
         isSelecting = false;
         Reroll_Ready = true;
+
+        RerollIconAN.Play();
+        Reroll_Guitar_Sound.Play();
 
         CanRerollCount--;
     }

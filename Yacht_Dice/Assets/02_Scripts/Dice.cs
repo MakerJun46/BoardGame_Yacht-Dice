@@ -14,19 +14,20 @@ public class Dice : MonoBehaviour
     public bool isKeep;
 
     public Transform Reroll_Position;
-    public Transform CanStopZone;
+    public Transform ResetPosition;
 
     float noMovementThreshold = 0.0001f;
     const int moMovementFrames = 3;
     Vector3[] previousLocations = new Vector3[moMovementFrames];
 
+    AudioSource AS;
+
     private void Start()
     {
         RB = gameObject.GetComponent<Rigidbody>();
+        AS = gameObject.GetComponent<AudioSource>();
 
-        isDiceStop = false;
-        isRerolled = false;
-        isKeep = false;
+        Reset_Values();
     }
 
     private void Update()
@@ -36,6 +37,7 @@ public class Dice : MonoBehaviour
 
     public void Reset_Values()
     {
+        gameObject.transform.position = ResetPosition.position;
         isDiceStop = false;
         isRerolled = false;
         isKeep = false;
@@ -102,5 +104,13 @@ public class Dice : MonoBehaviour
     {
         isDiceStop = false;
         isRerolled = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Wall" && !GameManager.GetInstance().isGameStarting && !GameManager.GetInstance().isGameEnd)
+        {
+            AS.Play();
+        }
     }
 }

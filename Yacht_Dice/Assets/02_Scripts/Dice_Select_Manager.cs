@@ -20,6 +20,7 @@ public class Dice_Select_Manager : MonoBehaviour
     public int sortCount;
     public int KeepDiceCount;
 
+    public AudioSource Dice_Keep_Sound;
 
     private void Awake()
     {
@@ -69,24 +70,17 @@ public class Dice_Select_Manager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse is down");
-
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
 
             if (hit && hitInfo.transform.gameObject.tag == "Dice")
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 if (!hitInfo.transform.gameObject.GetComponent<Dice>().isKeep)
                     KeepDice(hitInfo.transform.gameObject);
                 else
                 {
                     backDice(hitInfo.transform.gameObject);
                 }
-            }
-            else
-            {
-                Debug.Log("No hit");
             }
         }
     }
@@ -179,6 +173,8 @@ public class Dice_Select_Manager : MonoBehaviour
         Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count).gameObject.SetActive(false);
         sortCount = -1;
 
+        Dice_Keep_Sound.Play();
+
         KeepingDice_Sort();
     }
 
@@ -193,6 +189,8 @@ public class Dice_Select_Manager : MonoBehaviour
         KeepDiceCount--;
         Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count - 1).gameObject.SetActive(true);
         sortCount = -1;
+
+        Dice_Keep_Sound.Play();
     }
 
     public void setKeepPositionAllDices(List<GameObject> Dices)
