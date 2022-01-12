@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Calc_Dice_Score : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class Calc_Dice_Score : MonoBehaviour
     public int L_StraightScore;
     public int YachtScore;
 
-    public Text SpecialScore_Text;
+    public TextMeshProUGUI SpecialScore_Text;
+    Animation SpecialScore_Text_AN;
 
     public void detect_special_score()
     {
@@ -44,15 +46,11 @@ public class Calc_Dice_Score : MonoBehaviour
         isFullHouse = is_FullHouse(Dices);
         isFourofaKind = is_FourofaKind(Dices);
 
-        Debug.Log("isYacht : " + isYacht);
-        Debug.Log("isBigstraight : " + isLargeStraight);
-        Debug.Log("isLittleStraight : " + isSmallStraight);
-        Debug.Log("isFullHouse : " + isFullHouse);
-        Debug.Log("isFourofaKind : " + isFourofaKind);
-
         Calc_All_Score(Dices);
 
         Text_Update();
+
+        ScoreBoard.instance.isSpecialScore_Detected = true;
     }
 
     public void Calc_All_Score(List<Dice> Dices)
@@ -185,9 +183,10 @@ public class Calc_Dice_Score : MonoBehaviour
         return Array.Exists(NumberCount, x => x == 4);
     }
 
-    public void connect_Text(Text text)
+    public void connect_Text(TextMeshProUGUI text)
     {
         SpecialScore_Text = text;
+        SpecialScore_Text_AN = text.GetComponent<Animation>();
     }
     
     public void Text_Update()
@@ -195,23 +194,33 @@ public class Calc_Dice_Score : MonoBehaviour
         SpecialScore_Text.text = "";
         if(isYacht)
         {
-            SpecialScore_Text.text = SpecialScore_Text.text + "isYacht!\n";
+            SpecialScore_Text.text = SpecialScore_Text.text + "Yacht!";
+            Debug.Log("SetTrigger");
+            SpecialScore_Text_AN.Play();
         }
         if(isLargeStraight)
         {
-            SpecialScore_Text.text = SpecialScore_Text.text + "isBigStraight!\n";
+            SpecialScore_Text.text = SpecialScore_Text.text + "BigStraight!";
+            Debug.Log("SetTrigger");
+            SpecialScore_Text_AN.Play();
         }
         if(isSmallStraight)
         {
-            SpecialScore_Text.text = SpecialScore_Text.text + "isLittleStraight!\n";
+            SpecialScore_Text.text = SpecialScore_Text.text + "LittleStraight!";
+            Debug.Log("SetTrigger");
+            SpecialScore_Text_AN.Play();
         }
         if(isFullHouse)
         {
-            SpecialScore_Text.text = SpecialScore_Text.text + "isFullHouse!\n";
+            SpecialScore_Text.text = SpecialScore_Text.text + "FullHouse!";
+            Debug.Log("SetTrigger");
+            SpecialScore_Text_AN.Play();
         }
         if(isFourofaKind)
         {
-            SpecialScore_Text.text = SpecialScore_Text.text + "isFourofaKind!\n";
+            SpecialScore_Text.text = SpecialScore_Text.text + "FourofaKind!";
+            Debug.Log("SetTrigger");
+            SpecialScore_Text_AN.Play();
         }
     }
 

@@ -28,10 +28,7 @@ public class Dice_Select_Manager : MonoBehaviour
 
     private void Start()
     {
-        sortCount = -1;
-        KeepDiceCount = 0;
-        isDiceAllStop = false;
-        isDiceMoving = false;
+        Reset_Values();
     }
 
     void Update()
@@ -54,6 +51,19 @@ public class Dice_Select_Manager : MonoBehaviour
         
     }
 
+    public void Reset_Values()
+    {
+        rerolled_Dices.Clear();
+        sortCount = -1;
+        KeepDiceCount = GameManager.GetInstance().Keep_Dices.Count;
+        isDiceAllStop = false;
+        isDiceMoving = false;
+
+        for(int i = 0; i < GameManager.GetInstance().Reroll_Dices.Count; i++)
+        {
+            Dice_Select_Positions.transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
 
     public void SelectDice()
     {
@@ -164,7 +174,7 @@ public class Dice_Select_Manager : MonoBehaviour
 
         GameManager.GetInstance().Reroll_Dices.Remove(dice);
         GameManager.GetInstance().getReroll_Dices();
-            
+
         KeepDiceCount++;
         Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count).gameObject.SetActive(false);
         sortCount = -1;
@@ -183,5 +193,25 @@ public class Dice_Select_Manager : MonoBehaviour
         KeepDiceCount--;
         Dice_Select_Positions.transform.GetChild(rerolled_Dices.Count - 1).gameObject.SetActive(true);
         sortCount = -1;
+    }
+
+    public void setKeepPositionAllDices(List<GameObject> Dices)
+    {
+        int count = 0;
+        GameManager.GetInstance().Keep_Dices.Clear();
+        GameManager.GetInstance().Reroll_Dices.Clear();
+
+        foreach(GameObject Dice in Dices)
+        {
+            Dice.transform.position = Dice_Keep_Positions.transform.GetChild(count).position;
+            Dice.GetComponent<Rigidbody>().isKinematic = true;
+            Dice.GetComponent<Dice>().isKeep = true;
+            GameManager.GetInstance().Keep_Dices.Add(Dice);
+            count++;
+        }
+
+        KeepDiceCount = 5;
+        sortCount = -1;
+        KeepingDice_Sort();
     }
 }

@@ -34,6 +34,13 @@ public class Dice : MonoBehaviour
         isStop();
     }
 
+    public void Reset_Values()
+    {
+        isDiceStop = false;
+        isRerolled = false;
+        isKeep = false;
+        RB.isKinematic = false;
+    }
 
     public void isStop()
     {
