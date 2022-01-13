@@ -38,7 +38,7 @@ public class Dice_Select_Manager : MonoBehaviour
         {
             if (rerolled_Dices.Count > 0)
             {
-                sort_Dice();    // 소팅이 다 끝난 다음에
+                sort_Dice();    // 소팅이 다 끝난 다음에      
             }
             else
             {
@@ -60,7 +60,7 @@ public class Dice_Select_Manager : MonoBehaviour
         isDiceAllStop = false;
         isDiceMoving = false;
 
-        for(int i = 0; i < GameManager.GetInstance().Reroll_Dices.Count; i++)
+        for (int i = 0; i < GameManager.GetInstance().Reroll_Dices.Count; i++)
         {
             Dice_Select_Positions.transform.GetChild(i).gameObject.SetActive(true);
         }

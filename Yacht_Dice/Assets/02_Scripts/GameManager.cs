@@ -59,7 +59,10 @@ public class GameManager : MonoBehaviour
     public AudioSource Reroll_Cup_Shake_Sound;
     public AudioSource GameStart_Guitar_Sound;
     public AudioClip Turn_Change_audio_Clip;
+    public AudioClip Normal_Score_Effect_Sound;
     public AudioClip Special_Score_Sound;
+    public AudioClip Win_Sound;
+    public AudioClip reroll_Guitar_Sound;
     public AudioSource Special_Score_Sound_Audio;
     public AudioSource Winner_Sound;
 
@@ -157,8 +160,6 @@ public class GameManager : MonoBehaviour
         GameOverObjects.SetActive(true);
         RerollButton.gameObject.SetActive(false);
 
-        Winner_Sound.Play();
-
         ScoreBoard.instance.UpdateScore();
 
         string winner = ScoreBoard.instance.player1_Total > ScoreBoard.instance.player2_Total ? "Player A" : "Player B";
@@ -176,6 +177,7 @@ public class GameManager : MonoBehaviour
         isSelecting = false;
         color_a_goingUp = true;
         logo_a_goingUp = true;
+        Reroll_Guitar_Sound.clip = reroll_Guitar_Sound;
     }
 
     public void Induce_Select()
@@ -232,20 +234,22 @@ public class GameManager : MonoBehaviour
 
             string playerTurn_string = Turn_player == 1 ? "Player A Turn" : "Player B Turn";
 
-            Alarm(playerTurn_string);
-
-            Special_Score_Sound_Audio.clip = Turn_Change_audio_Clip;
-            Special_Score_Sound_Audio.Play();
-
             if (Turn_player == 1)
             {
                 Turn_Game++;
                 if(Turn_Game == 13)
                 {
                     isGameEnd = true;
+                    Winner_Sound.Play();
                     return;
                 }
             }
+
+            Alarm(playerTurn_string);
+
+            Special_Score_Sound_Audio.clip = Turn_Change_audio_Clip;
+            Special_Score_Sound_Audio.volume = 0.9f;
+            Special_Score_Sound_Audio.Play();
 
             ScoreBoard.instance.WriteScore = false;
             Turn_Change();

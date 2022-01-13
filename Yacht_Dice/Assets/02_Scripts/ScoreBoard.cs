@@ -304,39 +304,42 @@ public class ScoreBoard : MonoBehaviour
     public void UpdateSpecialScore_Text()
     {
         SpecialScore_Text.text = "";
+        GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+        GameManager.GetInstance().Special_Score_Sound_Audio.volume = 1.0f;
         if (score_Calculator.isYacht)
         {
             SpecialScore_Text.text = SpecialScore_Text.text + "Yacht!";
             SpecialScore_Text_AN.Play();
-            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
             GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
-        if (score_Calculator.isLargeStraight)
+        else if (score_Calculator.isLargeStraight)
         {
             SpecialScore_Text.text = SpecialScore_Text.text + "BigStraight!";
             SpecialScore_Text_AN.Play();
-            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
             GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
-        if (score_Calculator.isSmallStraight)
+        else if (score_Calculator.isSmallStraight)
         {
             SpecialScore_Text.text = SpecialScore_Text.text + "LittleStraight!";
             SpecialScore_Text_AN.Play();
-            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
             GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
-        if (score_Calculator.isFullHouse)
+        else if (score_Calculator.isFullHouse)
         {
             SpecialScore_Text.text = SpecialScore_Text.text + "FullHouse!";
             SpecialScore_Text_AN.Play();
-            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
             GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
-        if (score_Calculator.isFourofaKind)
+        else if (score_Calculator.isFourofaKind)
         {
             SpecialScore_Text.text = SpecialScore_Text.text + "FourofaKind!";
             SpecialScore_Text_AN.Play();
-            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Special_Score_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.Play();
+        }
+        else
+        {
+            GameManager.GetInstance().Special_Score_Sound_Audio.clip = GameManager.GetInstance().Normal_Score_Effect_Sound;
+            GameManager.GetInstance().Special_Score_Sound_Audio.volume = 0.65f;
             GameManager.GetInstance().Special_Score_Sound_Audio.Play();
         }
     }
